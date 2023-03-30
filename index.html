@@ -1,0 +1,84 @@
+<!-- 2- Crea una clase llamada Persona que siga las siguientes condiciones:
+Sus propiedades son: nombre, edad, DNI, sexo (H hombre, M mujer), peso y altura,
+año de nacimiento. Si quieres añadir alguna propiedad extra puedes hacerlo.
+Los métodos que se debe poder utilizar son:
+mostrarGeneracion: este método debe mostrar un mensaje indicando a qué
+generación pertenece la persona creada y cual es el rasgo característico de esta
+generación.
+Para realizar este método tener en cuenta la siguiente tabla de generaciones: IMAGEN 
+
+esMayorDeEdad: indica si es mayor de edad, devuelve un mensaje indicando que la
+persona es mayor de edad.
+mostrarDatos: devuelve toda la información del objeto.
+Luego crea la interfaz necesaria para que el usuario pueda crear un objeto
+persona, permitiendo ingresar las propiedades mediante un formulario, también
+agregar los botones “mostrar generación”, es “mayor de edad” e indicar en un alert
+el resultado de la función correspondiente.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Quinto tp JS punto 2</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Crear persona</h1>
+      <form id="formulario">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre:</label>
+          <input type="text" class="form-control" id="nombre" required />
+        </div>
+        <div class="mb-3">
+          <label for="edad" class="form-label">Edad:</label>
+          <input type="number" class="form-control" id="edad" required />
+        </div>
+        <div class="mb-3">
+          <label for="dni" class="form-label">DNI:</label>
+          <input type="number" class="form-control" id="dni" required />
+        </div>
+        <div class="mb-3">
+          <label for="sexo" class="form-label">Sexo:</label>
+          <select class="form-select" id="sexo" required>
+            <option value="">Seleccione una opción</option>
+            <option value="H">Hombre</option>
+            <option value="M">Mujer</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="peso" class="form-label">Peso:</label>
+          <input type="number" class="form-control" id="peso" required />
+        </div>
+        <div class="mb-3">
+          <label for="altura" class="form-label">Altura:</label>
+          <input type="number" class="form-control" id="altura" required />
+        </div>
+        <div class="mb-3">
+          <label for="anioNacimiento" class="form-label"
+            >Año de nacimiento:</label
+          >
+          <input type="number" class="form-control" id="anioNacimiento" required />
+        </div>
+        <button id="btnCrear" onclick="crearPersona()" type="submit" class="btn btn-primary">Crear persona</button>
+      </form>
+      <button id="btnMostrarGeneracion" class="btn btn-secondary">
+        Mostrar generación
+      </button>
+      <button id="btnEsMayorDeEdad" class="btn btn-secondary">
+        ¿Es mayor de edad?
+      </button>
+      <div id="resultado"></div>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
